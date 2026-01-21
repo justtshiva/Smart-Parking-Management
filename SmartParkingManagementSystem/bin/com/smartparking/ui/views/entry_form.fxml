@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.smartparking.ui.EntryFormController"
+      spacing="12">
+
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <Label text="Vehicle Entry"
+           style="-fx-font-size:16px; -fx-font-weight:bold;" />
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Owner Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="tfOwnerName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Phone:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="tfPhone" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Vehicle Number:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="tfVehicleNumber" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Vehicle Type:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <ChoiceBox fx:id="cbVehicleType"
+                   GridPane.rowIndex="3"
+                   GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Label fx:id="lblStatus" text=""/>
+        <Button text="Cancel" onAction="#onCancel"/>
+        <Button text="Park Vehicle" onAction="#onPark"/>
+    </HBox>
+
+</VBox>
